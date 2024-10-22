@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-10-21T17:01:12.958112700Z</date>
+  <millis>1729530072958</millis>
+  <nanos>112700</nanos>
+  <sequence>1</sequence>
+  <logger>geometry2d.Circle</logger>
+  <level>SEVERE</level>
+  <class>geometry2d.Circle</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>Circle create</message>
+</record>
+</log>

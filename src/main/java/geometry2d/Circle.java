@@ -1,11 +1,28 @@
 package geometry2d;
 
+import java.util.logging.*;
 import exceptions.InvalidRadiusException;
 
 public class Circle implements Figure
 {
+    private static final Logger logger = Logger.getLogger(Circle.class.getName());
 
     private double radius;
+
+    static
+    {
+        try
+        {
+            FileHandler filehandler = new FileHandler("figures.log", true);
+            filehandler.setFormatter(new XMLFormatter());
+            logger.addHandler(filehandler);
+            logger.setLevel(Level.SEVERE);
+        }
+        catch (Exception er)
+        {
+            logger.log(Level.SEVERE, "ERROR",er);
+        }
+    }
 
     public Circle(double radius) throws InvalidRadiusException
     {
@@ -14,6 +31,7 @@ public class Circle implements Figure
             throw new InvalidRadiusException("Radius < 0");
         }
         this.radius = radius;
+        logger.severe("Circle create");
     }
 
     public double area()
